@@ -1,0 +1,41 @@
+package com.cos.action.reply;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.cos.action.Action;
+import com.cos.dao.ReplyDao;
+import com.cos.model.User;
+import com.cos.util.Script;
+
+public class ReplyDeleteAction implements Action{
+	@Override
+	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		BufferedReader in = request.getReader();
+		int id = Integer.parseInt(in.readLine());
+		
+		ReplyDao dao = new ReplyDao();
+		
+		String rUsername = dao.findByReplyId(id);		
+		User user = (User)request.getSession().getAttribute("user");
+		if(!(rUsername.equals(user.getUsername()))) {
+			System.out.println("잘못된 접근");
+			return;
+		}
+		
+		int result = dao.delete(id);
+		
+		if(result == 1) {
+			PrintWriter out = response.getWriter();
+			out.print("ok");
+			out.flush();
+		}else {
+			Script.back(response);
+		}
+	}
+}
