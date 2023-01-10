@@ -20,9 +20,9 @@
  + .
  <br/><br/><br/> 
 ## 해당 파일의 동작원리
-Lang : JSP
-IDE : Enterprise Eclipse 
-Sturcture : model2
+Lang : JSP <br/>
+IDE : Enterprise Eclipse <br/>
+Sturcture : model2 <br/>
 
 ### 구조
 
