@@ -25,7 +25,7 @@ IDE : Enterprise Eclipse <br/>
 Sturcture : model2 <br/>
 
 ### 구조
-![20230110_182758](https://user-images.githubusercontent.com/117807082/211513528-a4a58f50-3ec1-4a45-b3df-090bb7b98ea0.png)
+![20230110_182758](https://user-images.githubusercontent.com/117807082/211515832-4d498662-a6e3-4067-92ba-54ea8cf0afc5.png)
 <br/><br/>
 위 그림과 같이 
 
