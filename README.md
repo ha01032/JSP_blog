@@ -20,7 +20,7 @@ Server : Tomcat 9.0<br/><br/>
 [클론코딩출처] : https://github.com/111coding/jsp-Model2-MySQL-blog
 <br/><br/>
 ## 사이트 설명
-![20230111_083029](https://user-images.githubusercontent.com/117807082/211684132-87d0c0b6-709a-4da8-a5fd-fec654e80605.png)
+![211684132-87d0c0b6-709a-4da8-a5fd-fec654e80605](https://user-images.githubusercontent.com/117807082/211773162-c213ae6c-a292-4478-9d78-3caa4ecf5ddf.png)
   
 **블로그** : JOIN을 통해 회원가입/LOGIN을 통해 로그인 한 후, POSTING를 통해 글을 포스팅할 수 있으며, Read More을 통해 그 글에 들어가면 댓글 및 대댓글을 달 수 있어서 서로 편하게 소통할 수 있는 사이트
  <br/><br/>
