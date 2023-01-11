@@ -37,7 +37,7 @@ Server : Tomcat 9.0<br/><br/>
 ### 구조 : MVC 모델2
 ![20230110_182758](https://user-images.githubusercontent.com/117807082/211515832-4d498662-a6e3-4067-92ba-54ea8cf0afc5.png)
 <br/><br/>
-해당 파일은 Model(M)/VIEW(V)/CONTROLLER(C)가 각각 분리된 MVC 모델2 구조를 이루고 있으며, 위 그림과 같은 방식으로 요청에 대한 응답을 처리한다. VIEW에서 특정 패턴의 링크를 통해 요청하면 그 패턴을 인식한 CONTROLLER가 해당 패턴에 특이적인 클래스 생성을 하고, MODEL을 통해 요청한 데이터 작업을 수행후 결과 VIEW를 던져줌으로서 응답한다.
+해당 파일은 Model(M)/VIEW(V)(.jsp)/CONTROLLER(C)가 각각 분리된 MVC 모델2 구조를 이루고 있으며, 위 그림과 같은 방식으로 요청에 대한 응답을 처리한다. VIEW에서 특정 패턴의 링크를 통해 요청하면 그 패턴을 인식한 CONTROLLER가 해당 패턴에 특이적인 클래스 생성을 하고, MODEL을 통해 요청한 데이터 작업을 수행후 결과 VIEW를 던져줌으로서 응답한다.
 1. VIEW 요청<br/>
 뷰에서 특정 액션에 의해 **href주소**로 이동 요청을 한다. 이 때, href주소의 패턴이 "/blog/(......)? cmd = (cmd값) ...."과 같을 때, 아래의 과정이 이루어진다.
 
@@ -66,7 +66,7 @@ doGet/Post 메소드는 위의 작업을 다 마친 후 결과 VIEW를 던져줌
 -  javax.jws.soap.SOAPBinding.Use와 com.sun.glass.ui.Application가 import 되지 않아서, 그냥 지웠더니 다행히 실행 및 동작에 문제 없었음.
 2. DB 안열리는 문제(505 에러) : context.xml에서 아이디와 비번부분만 수정하고 나머지는 그대로 두었더니 해결됨.
 3. 프로필 문제 : webapp에 media폴더를 생성하고, UserProfileAction.java의 내용 전부를 잘라내기 한 후 다시 붙여넣어서 저장하니 해결.
-4. gmail로 메일 인증 안되는 문제 : 그냥 회원가입 과정에서 마지막에 sendRedirect(index.xml)로 바꿔줌으로서 gmail 과정을 뺌.
+4. gmail로 메일 인증 안되는 문제 : 그냥 회원가입 과정에서 마지막에 sendRedirect(index.jsp)로 바꿔줌으로서 gmail 과정을 뺌.
 5. 네이버 로그인 안되는 문제 : API문제. 사용에 지장없으므로 그냥 놔둠.
 
 
