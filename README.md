@@ -6,7 +6,7 @@ Database : MySQL<br/>
 Server : Tomcat 9.0<br/><br/>
 
 **실행방법** : 해당 설정들을 다 완료한 후 실행
-1. 붙여넣기 : Eclipse(Enterprise java 22.12 ver. 기준)에 blog로 Dynamic Web Project를 만들고, java src에 com폴더 넣고, web-app에 META-INF제외 다 붙여넣기. META-INF 안의 context.xml 복사하고 붙여넣기 
+1. 붙여넣기 : Eclipse(Enterprise java 22.12 ver. 기준)에 blog로 Dynamic Web Project를 만들고, java에 com폴더 넣고, web-app에 META-INF제외 다 붙여넣기. META-INF 안의 context.xml 복사하고 붙여넣기 
 2. Eclipse UTF-8 언어설정 : Window > Preferences에 들어가서 encoding을 검색한 후 각각 설정
 3. 서버 설정 : Tomcat 9.0으로 설정(다른 버전을 해도 큰 문제는 없음)
 4. 데이터베이스 설정 : context.xml에서 데이터베이스 유저 아이디 비번만 수정/ mysql에 해당 유저로 들어간후 **테이블세팅.txt** 내용을 복사해서 전부 실행
