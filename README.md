@@ -63,7 +63,7 @@ doGet/Post 메소드는 위의 작업을 다 마친 후 결과 VIEW를 던져줌
 1. 엑박 뜨는 문제 : 라이브러리 문제
 - lombok 라이브러리가 되지 않아서 DTO(model 패키지)에 각각 getter/setter 추가<br/>
 - J-UNIT 라이브러리를 buildpath 추가해서 문제해결<br/>
--  javax.jws.soap.SOAPBinding.Use와 com.sun.glass.ui.Application가 import 되지 않아서, 그냥 지웠더니 다행히 실행에 문제 없었음.
+-  javax.jws.soap.SOAPBinding.Use와 com.sun.glass.ui.Application가 import 되지 않아서, 그냥 지웠더니 다행히 실행 및 동작에 문제 없었음.
 2. DB 안열리는 문제(505 에러) : context.xml에서 아이디와 비번부분만 수정하고 나머지는 그대로 두었더니 해결됨.
 3. 프로필 문제 : 미디어 폴더를 하위에 생성하고, UserProfileAction.java의 내용 전부를 잘라내기 한 후 다시 붙여넣어서 저장하니 해결.
 4. gmail로 메일 인증 안되는 문제 : 그냥 회원가입 과정에서 sendRedirect(index.xml)로 바꿔줌으로서 gmail 과정을 뺌.
