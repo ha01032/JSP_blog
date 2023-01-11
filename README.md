@@ -37,12 +37,16 @@ Server : Tomcat 9.0<br/><br/>
 ### 구조 : MVC 모델2
 ![20230110_182758](https://user-images.githubusercontent.com/117807082/211515832-4d498662-a6e3-4067-92ba-54ea8cf0afc5.png)
 <br/><br/>
-해당 파일은 위 그림과 같이 Model(M)/VIEW(V)/CONTROLLER(C)가 각각 분리된 MVC 모델2 구조를 이루고 있다. VIEW에서 특정 패턴의 링크를 통해 요청하면 그 패턴을 인식한 CONTROLLER가 해당 패턴에 특이적인 클래스 생성을 하고, MODEL을 통해 요청한 데이터 작업을 수행후 결과 VIEW를 던져줌으로서 응답한다.
-1.VIEW
-2.
-3.
-4.
-5.
+해당 파일은 Model(M)/VIEW(V)/CONTROLLER(C)가 각각 분리된 MVC 모델2 구조를 이루고 있으며, 위 그림과 같은 방식으로 요청에 대한 응답을 처리한다. VIEW에서 특정 패턴의 링크를 통해 요청하면 그 패턴을 인식한 CONTROLLER가 해당 패턴에 특이적인 클래스 생성을 하고, MODEL을 통해 요청한 데이터 작업을 수행후 결과 VIEW를 던져줌으로서 응답한다.
+1. VIEW 요청
+뷰에서 특정 액션에 의해 href주소로 이동 요청을 한다. 이 때, href주소의 패턴이 "/blog/______? cmd = ______ ...."과 같을 때, 아래의 과정이 이루어진다.
+
+2. CONTROLLER 특이적 클래스 생성 
+
+3. MODEL을 통한 요청 데이터 작업
+
+4. 결과 VIEW 던져줌
+
 
 ### 동작 원리 
 
