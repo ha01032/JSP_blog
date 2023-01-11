@@ -1,0 +1,49 @@
+-- root가 아닌 다른 user 만들어서 하는 경우
+create user '유저아이디'@'localhost' identified by 'bitc5600';
+GRANT ALL PRIVILEGES ON . TO '유저아이디'@localhost;
+
+
+-- 여기서부터 테이블 생성
+
+create database blog;
+use blog;
+
+CREATE TABLE user(
+   id int auto_increment primary key,
+    username varchar(100) not null unique,
+    password varchar(100) not null,
+    email varchar(100) not null,
+    address varchar(100) not null,
+    userProfile varchar(200) default '/blog/img/userProfile.png',
+    createDate timestamp
+) engine=InnoDB default charset=utf8;
+
+CREATE TABLE board(
+   id int auto_increment primary key,
+    userId int,
+    title varchar(100) not null,
+    content longtext,
+    readCount int default 0,
+    createDate timestamp,
+    foreign key (userId) references user (id)
+) engine=InnoDB default charset=utf8;
+
+CREATE TABLE comment(
+   id int auto_increment primary key,
+    userId int,
+    boardId int,
+    content varchar(300) not null,
+    createDate timestamp,
+    foreign key (userId) references user (id) on delete set null,
+    foreign key (boardId) references board (id) on delete cascade
+) engine=InnoDB default charset=utf8;
+
+CREATE TABLE reply(
+   id int auto_increment primary key,
+    commentId int,
+    userId int,
+    content varchar(300) not null,
+    createDate timestamp,
+    foreign key (commentId) references comment (id) on delete cascade,
+    foreign key (userId) references user (id) on delete set null
+) engine=InnoDB default charset=utf8;
